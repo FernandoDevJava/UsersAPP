@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UsersAPP</string>
+    <string name="login_de_mail">Login / e-mail</string>
+    <string name="senha">Senha</string>
+    <string name="user_create">Usuário</string>
+    <string name="Senha">Senha</string>
+    <string name="Criar">Criar</string>
+</resources>

@@ -4,9 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.usersapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -20,8 +21,22 @@ class MainActivity : AppCompatActivity() {
         teste.setOnClickListener {
             var intent = Intent(applicationContext, create_user::class.java)
             startActivity(intent)
+
+
+            binding.btnLogin.setOnClickListener(this)
+
         }
 
+    }
+
+    override fun onClick(view: View) {
+        if (view.id == R.id.btn_login) {
+            calculate()
+        }
+    }
+
+    private fun calculate() {
+        Toast.makeText(this, "Fui acionado", Toast.LENGTH_LONG).show()
     }
 
 }
